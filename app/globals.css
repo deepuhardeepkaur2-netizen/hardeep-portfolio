@@ -24,3 +24,152 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Banner Image Animation */
+.banner-image {
+  animation: moveImage 5s ease-in-out infinite;
+}
+
+/* Purple Background Animation */
+.banner-bg {
+  animation: moveBg 5s ease-in-out infinite;
+}
+
+/* Outer Circle Animation */
+.banner-outer {
+  animation: moveOuter 6s ease-in-out infinite;
+}
+
+@keyframes moveImage {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-18px);
+  }
+}
+
+@keyframes moveBg {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes moveOuter {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-20px);
+  }
+}
+
+/* Accessibility: Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+  .banner-image,
+  .banner-bg,
+  .banner-outer {
+    animation: none !important;
+  }
+}
+
+
+
+@theme inline {
+  --font-sans: var(--font-inter), sans-serif;
+}
+
+html,
+body {
+  font-family: var(--font-inter), sans-serif;
+}
+
+
+/* Global Font */
+html,
+body {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Main Headings */
+h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(22px, 2.5vw, 28px);
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* Paragraphs and Text */
+
+p,
+li {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Buttons and Links */
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 16px;
+}
+
+a {
+  font-family: inherit;
+}
+
+/* Small Mobile Screens */
+@media (max-width: 640px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+
+  p,
+  li {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+
