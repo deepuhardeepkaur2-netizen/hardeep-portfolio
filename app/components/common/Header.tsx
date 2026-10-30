@@ -9,11 +9,13 @@ const Header = () => {
   const closeMenu = () => setMenuOpen(false);
 
   const linkClass =
-    "block py-3 text-base font-medium text-[#0b0b4f] transition duration-300 hover:text-[#f5a623] md:py-0 md:text-lg lg:text-xl";
+    "block py-3 text-base font-medium text-[#2d266d] transition duration-300 hover:text-[#f5a623] md:py-0 md:text-lg lg:text-xl";
 
   return (
    
-<header className="relative z-50 w-full bg-white min-[992px]:bg-[#eef2f7]">
+
+<header className="relative z-50 w-full max-w-none bg-[#eef2f7] ">
+
 
       <div className="mx-auto flex min-h-[90px] max-w-[1140px] items-center justify-between px-4 py-3 sm:px-6 md:min-h-[100px] md:px-5 md:py-4">
         {/* Logo */}
@@ -92,15 +94,15 @@ const Header = () => {
       </div>
 
       {/* Mobile / Tablet Dropdown Menu */}
-      <div
-        id="mobile-navigation"
-        className={`overflow-hidden border-t  bg-[#eef2f7] transition-all duration-300 ease-in-out lg:hidden ${
-          menuOpen
+    <div
+    id="mobile-navigation"
+    className={`overflow-hidden shadow-md shadow-black/10 transition-all duration-300 ease-in-out lg:hidden ${
+        menuOpen
             ? "visible max-h-[420px] opacity-100"
             : "invisible max-h-0 opacity-0"
-        }`}
-      >
-        <nav className="mx-0 max-w-[1140px] px-5 pb-5 pt-4 text-center bg-white">
+    }`}
+>
+        <nav className="mx-0 max-w-[1140px] px-5 pb-5 pt-4 text-center bg-[#eef2f7]">
           <ul className="flex flex-col items-center gap-5">
             <li>
               <a href="/" onClick={closeMenu} className={linkClass}>

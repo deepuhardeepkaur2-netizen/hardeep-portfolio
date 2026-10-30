@@ -37,14 +37,14 @@ const ScrollTop = () => {
         fixed z-50
         right-3 bottom-3
         flex items-center justify-center
-        h-11 w-11
+        h-20 w-20
         sm:right-5 sm:bottom-5 sm:h-12 sm:w-12
-        lg:right-8 lg:bottom-8 lg:h-[50px] lg:w-[50px]
+        lg:right-8 lg:bottom-8 lg:h-[70px] lg:w-[70px]
         rounded-full
         border border-white/20
         bg-[#f7a71d]
         text-xl font-bold text-white
-        sm:text-2xl lg:text-[28px]
+        sm:text-2xl lg:text-[34px]
         shadow-lg shadow-black/15
         transition-all duration-300 ease-in-out
         hover:-translate-y-1 hover:bg-[#6c2bff]
@@ -59,7 +59,9 @@ const ScrollTop = () => {
         }
       `}
     >
-      <span aria-hidden="true">↑</span>
+      <span aria-hidden="true" className="text-[24px]">
+        ↑
+      </span>
     </button>
   );
 };
